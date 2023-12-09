@@ -6,11 +6,11 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/page1',(req,res)=>{
+app.get('/api/page1',(req,res)=>{      //  /api is a Standard where we keep it before our desired page 
     res.send('<h1>Hello this is Page 1<h1>');
 })
 
-app.get('/jokes',(req,res)=>{
+app.get('/api/jokes',(req,res)=>{      //  /api is a Standard where we keep it before our desired page 
     const jokes=[
         {
             id:1,
