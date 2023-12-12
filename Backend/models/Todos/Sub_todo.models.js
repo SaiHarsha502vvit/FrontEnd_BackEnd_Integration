@@ -31,9 +31,15 @@ const subTodoSchema = new mongoose.Schema(
     },
   },
   { timestamps: true }
-);  
+  /* 
+      Mongoose schemas support a timestamps option.
+      If you set timestamps: true, Mongoose will add two properties of type Date to your schema:
+      createdAt: a date representing when this document was created
+      updatedAt: a date representing when this document was last updated
+  */
+);
 
-export const SubTodo = mongoose.model("SubTodo", subTodoSchema); // (Name , Schema) 
+export const SubTodo = mongoose.model("SubTodo", subTodoSchema); // (Name , Schema)
 /* Here the Important Thing is we Export this thing 
    and We use this in other files Rather than Getting it Mongodb Database
    and In the Mongodb Database the DataBase name Will be in 
