@@ -1,6 +1,15 @@
 import mongoose from 'mongoose'
 
 
+/**
+ * User Schema
+ * @typedef {Object} UserSchema
+ * @property {string} username - The username of the user.
+ * @property {string} email - The email of the user.
+ * @property {string} password - The password of the user.
+ * @property {Date} createdAt - The timestamp when the user was created.
+ * @property {Date} updatedAt - The timestamp when the user was last updated.
+ */
 const userSchema =new mongoose.Schema(
     {
         username:{
@@ -28,4 +37,9 @@ const userSchema =new mongoose.Schema(
     }
 )
 
-export const User = mongoose.model("User",userSchema);
+export const User = mongoose.model("User",userSchema);// (Name , Schema) 
+/* Here the Important Thing is we Export this thing 
+   and We use this in other files Rather than Getting it Mongodb Database
+   and In the Mongodb Database the DataBase name Will be in 
+   
+   "users" which is lowerCase and Plural    */
