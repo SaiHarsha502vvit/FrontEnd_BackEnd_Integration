@@ -43,7 +43,16 @@ const todoSchema = new mongoose.Schema({
         */
         }
     ] //Array of Sub-Todos
-}, { timestamps: true });
+}, { timestamps: true }
+    /* 
+      Mongoose schemas support a timestamps option.
+      If you set timestamps: true, Mongoose will add two properties of type Date to your schema:
+      createdAt: a date representing when this document was created
+      updatedAt: a date representing when this document was last updated
+  */
+
+
+);
 
 export const Todo=mongoose.model("Todo",todoSchema);// (Name , Schema) 
 /* Here the Important Thing is we Export this thing 
